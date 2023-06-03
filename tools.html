@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="tools.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    
+    <title>Cauculator</title>
+</head>
+<body>
+    <div class="index">
+        <h1 id="label">請選擇你要做什麼</h1><hr>
+        <button id="guess_number" tabindex=1>猜數字</button>
+        <button id="cauculator" tabindex=2>計算機</button>
+        <button id="find_factor" tabindex=3>找因數</button>
+        <button id="secret" tabindex="4">秘密</button>
+    </div>
+    <div class="calc">
+        <label>請輸入第一個數字</label>
+        <input type="text"><br>
+        <label>請輸入第二個數字</label>
+        <input type="text">
+        
+        <h3>請選擇運算符號</h3>
+
+        <label for="chooseOp">+</label>
+        <input type="radio" name="chooseOp" value="plus">
+
+        <label for="chooseOp">-</label>
+        <input type="radio" name="chooseOp" value="minus">
+
+        <label for="chooseOp">×</label>
+        <input type="radio" name="chooseOp" value="times">
+
+        <label for="chooseOp">÷</label>
+        <input type="radio" name="chooseOp" value="divide">
+
+        <button id="submit">確認</button>
+        <footer onclick="location.reload()">回首頁</footer>
+    </div>
+    <script src="tools.js"></script>
+</body>
+</html>
