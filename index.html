@@ -15,26 +15,27 @@
         <button id="guess_number" tabindex=1>猜數字</button>
         <button id="cauculator" tabindex=2>計算機</button>
         <button id="find_factor" tabindex=3>找因數</button>
-        <button id="secret" tabindex="4">秘密</button>
+        <button id="both_factor" tabindex="4">秘密</button>
+        <button id="secret" tabindex="5">秘密</button>
     </div>
     <div class="calc">
         <label>請輸入第一個數字</label>
         <input type="text"><br>
         <label>請輸入第二個數字</label>
-        <input type="text">
+        <input type="text" id="calcInput2">
         
         <h3>請選擇運算符號</h3>
 
-        <label for="chooseOp">+</label>
-        <input type="radio" name="chooseOp" value="plus">
+        <label>+</label>
+        <input type="radio" name="chooseOp">
 
-        <label for="chooseOp">-</label>
-        <input type="radio" name="chooseOp" value="minus">
+        <label>-</label>
+        <input type="radio" name="chooseOp">
 
-        <label for="chooseOp">×</label>
-        <input type="radio" name="chooseOp" value="times">
+        <label>×</label>
+        <input type="radio" name="chooseOp">
 
-        <label for="chooseOp">÷</label>
+        <label>÷</label>
         <input type="radio" name="chooseOp" value="divide">
 
         <button id="submit">確認</button>
