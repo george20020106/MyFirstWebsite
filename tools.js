@@ -1,4 +1,3 @@
-"use strict";
 const pw1 = 'super mario maker2';
 const pw2 = '00000000';
 const pw3 = '9876543210';
@@ -48,24 +47,42 @@ function checkGuess() {
 *
 *
 */
+
+
 const cauculator = document.querySelector("#cauculator"); //計算機 button.....................................
 const calc = document.querySelector('.calc');             //       tab
-const calc1 = document.querySelector('input')[0], calc2 = document.querySelector('input')[1];
-const calcSubmit = document.querySelector('.calc #submit');
-
+const calc1 = document.querySelector('input');
+const calc2 = document.querySelector('#calcInput2'); // enter number
+const calcSubmit = document.querySelector('.calc #submit'); // submit button
+const chooseOp = document.getElementsByName('chooseOp'); // choose the operator
 function handleCauculator() {
 	index.style.display = 'none';
 	setTimeout(() => {
 		calc.style.display = 'block';
 	}, 100);
-	
-
+	calcSubmit.addEventListener('click', function() {
+		try {
+			let result = 0;
+			if (chooseOp[0].checked)      result = Number(calc1.value) + Number(calc2.value);
+			else if (chooseOp[1].checked) result = Number(calc1.value) - Number(calc2.value); 
+			else if (chooseOp[2].checked) result = Number(calc1.value) * Number(calc2.value); 
+			else if (chooseOp[3].checked) result = Number(calc1.value) / Number(calc2.value); 
+			alert(result);
+		}
+		catch(error) {
+			alert(`錯誤! ${error}`);
+			location.reload();
+		}
+		
+	});
 }
 /*
  * 
  * 
  * 
  */
+const both_factor = document.querySelector('#both_factor');
+
 const secret = document.querySelector('#secret'); // 秘密...................................................
 function handleSecret() {
 	let usersEnter = prompt('輸入密碼');
@@ -96,11 +113,11 @@ function handleFactor() {
 
 	while (usersEnter <= 0 || Math.floor(usersEnter) != usersEnter) {
 		alert('請輸入正整數');
-		usersEnter = prompt('請輸入數字');
+		usersEnter = Number(prompt('請輸入數字'));
 	}
 	while (usersEnter > 2000) {
 		alert('請輸入小於2000的整數');
-		usersEnter = prompt('請輸入數字');
+		usersEnter = Number(prompt('請輸入數字'));
 	}
 	
 	for (let i = 1; i <= usersEnter; i++) {
